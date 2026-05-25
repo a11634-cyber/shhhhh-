@@ -1,0 +1,32 @@
+/**
+ * Copyright (c) 2014 The xterm.js authors. All rights reserved.
+ * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
+ * https://github.com/chjj/term.js
+ * @license MIT
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Originally forked from (with the author's permission):
+ *   Fabrice Bellard's javascript vt100 for jslinux:
+ *   http://bellard.org/jslinux/
+ *   Copyright (c) 2011 Fabrice Bellard
+ *   The original design remains. The terminal itself
+ *   has been extended to include xterm CSI codes, among
+ *   other features.
+ */.xterm{cursor:text;position:relative;user-select:none;-ms-user-select:none;-webkit-user-select:none}.xterm.focus,.xterm:focus{outline:none}.xterm .xterm-helpers{position:absolute;top:0;z-index:5}.xterm .xterm-helper-textarea{padding:0;border:0;margin:0;position:absolute;opacity:0;left:-9999em;top:0;width:0;height:0;z-index:-5;white-space:nowrap;overflow:hidden;resize:none}.xterm .composition-view{background:#000;color:#fff;display:none;position:absolute;white-space:nowrap;z-index:1}.xterm .composition-view.active{display:block}.xterm .xterm-viewport{background-color:#000;overflow-y:scroll;cursor:default;position:absolute;right:0;left:0;top:0;bottom:0}.xterm .xterm-screen{position:relative}.xterm .xterm-screen canvas{position:absolute;left:0;top:0}.xterm .xterm-scroll-area{visibility:hidden}.xterm-char-measure-element{display:inline-block;visibility:hidden;position:absolute;top:0;left:-9999em;line-height:normal}.xterm.enable-mouse-events{cursor:default}.xterm.xterm-cursor-pointer,.xterm .xterm-cursor-pointer{cursor:pointer}.xterm.column-select.focus{cursor:crosshair}.xterm .xterm-accessibility,.xterm .xterm-message{position:absolute;left:0;top:0;bottom:0;right:0;z-index:10;color:transparent;pointer-events:none}.xterm .live-region{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.xterm-dim{opacity:1!important}.xterm-underline-1{text-decoration:underline}.xterm-underline-2{text-decoration:double underline}.xterm-underline-3{text-decoration:wavy underline}.xterm-underline-4{text-decoration:dotted underline}.xterm-underline-5{text-decoration:dashed underline}.xterm-overline{text-decoration:overline}.xterm-overline.xterm-underline-1{text-decoration:overline underline}.xterm-overline.xterm-underline-2{text-decoration:overline double underline}.xterm-overline.xterm-underline-3{text-decoration:overline wavy underline}.xterm-overline.xterm-underline-4{text-decoration:overline dotted underline}.xterm-overline.xterm-underline-5{text-decoration:overline dashed underline}.xterm-strikethrough{text-decoration:line-through}.xterm-screen .xterm-decoration-container .xterm-decoration{z-index:6;position:absolute}.xterm-screen .xterm-decoration-container .xterm-decoration.xterm-decoration-top-layer{z-index:7}.xterm-decoration-overview-ruler{z-index:8;position:absolute;top:0;right:0;pointer-events:none}.xterm-decoration-top{z-index:2;position:relative}:root{color-scheme:dark;font-family:Inter,system-ui,sans-serif;background:#0f1117;color:#e5eef9}body{margin:0;background:#0f1117}button,input,select,textarea{font:inherit}.app-shell{display:flex;flex-direction:column;height:100vh}.content-shell{display:flex;flex:1;min-height:0}.sidebar-shell{width:320px;min-width:280px;border-right:1px solid #2b3340;overflow:auto;padding:12px;background:#111827}.main-area{flex:1;display:flex;flex-direction:column;min-width:0}.activity-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#111827;border-bottom:1px solid #202633}.activity-icons{display:flex;gap:10px}.activity-icon{border:none;background:transparent;color:#cbd5e1;cursor:pointer;padding:8px 10px;border-radius:10px}.activity-icon.active{background:#1d4ed8;color:#fff}.editor-area{flex:1;min-height:0}.editor-tabs{display:flex;gap:8px;padding:10px 12px;background:#111827;border-bottom:1px solid #202633}.editor-tab{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#1f2937;color:#f8fafc}.editor-tab.active{background:#2563eb}.terminal-frame{border-top:1px solid #2b3340;background:#020617}.terminal-toolbar{display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid #2b3340}.status-bar{display:flex;justify-content:space-between;padding:8px 12px;border-top:1px solid #2b3340;background:#0b1120;font-size:12px}.panel-card,.settings-panel,.command-palette{background:#111827;border:1px solid #2b3340;border-radius:12px;padding:12px}.file-tree{list-style:none;padding:0;margin:0}.file-tree li{margin:4px 0}.file-tree button{width:100%;text-align:left;background:transparent;color:inherit;border:0;padding:6px 8px;border-radius:8px}.file-tree button:hover{background:#1f2937}.settings-panel{position:fixed;top:60px;right:20%;bottom:60px;left:20%;z-index:10}.command-palette{position:fixed;inset:80px 20% auto 20%;z-index:10}.ai-message{padding:10px;border-radius:12px;background:#0f172a;margin-bottom:10px}.ai-input-row{display:flex;gap:8px}.ai-input-row input,.ai-input-row textarea,.ai-input-row select{width:100%;background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:8px;padding:8px}.gutter{height:8px;background:linear-gradient(90deg,transparent,#1d4ed8,transparent)}

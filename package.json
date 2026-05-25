@@ -1,0 +1,40 @@
+{
+  "name": "codel-editor",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build": "npm run build:main && npm run build:renderer",
+    "build:main": "tsc -p tsconfig.json",
+    "build:renderer": "vite build",
+    "dev": "concurrently -k \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev:renderer": "vite",
+    "dev:main": "export NODE_ENV=development; npm run build:main && electron dist/main/main.js",
+    "start": "export NODE_ENV=production; npm run build && if [ -z \"$DISPLAY\" ] && command -v xvfb-run >/dev/null 2>&1; then xvfb-run -a electron dist/main/main.js; else electron dist/main/main.js; fi",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
+    "electron-store": "^10.0.0",
+    "monaco-editor": "^0.52.0",
+    "node-pty": "^1.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "simple-git": "^3.27.0",
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.8.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.1.0",
+    "electron": "^33.0.2",
+    "electron-builder": "^26.0.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  }
+}

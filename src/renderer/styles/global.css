@@ -1,0 +1,188 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0f1117;
+  color: #e5eef9;
+}
+
+body {
+  margin: 0;
+  background: #0f1117;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-shell {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar-shell {
+  width: 320px;
+  min-width: 280px;
+  border-right: 1px solid #2b3340;
+  overflow: auto;
+  padding: 12px;
+  background: #111827;
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.activity-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #111827;
+  border-bottom: 1px solid #202633;
+}
+
+.activity-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.activity-icon {
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.activity-icon.active {
+  background: #1d4ed8;
+  color: white;
+}
+
+.editor-area {
+  flex: 1;
+  min-height: 0;
+}
+
+.editor-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #111827;
+  border-bottom: 1px solid #202633;
+}
+
+.editor-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #1f2937;
+  color: #f8fafc;
+}
+
+.editor-tab.active {
+  background: #2563eb;
+}
+
+.terminal-frame {
+  border-top: 1px solid #2b3340;
+  background: #020617;
+}
+
+.terminal-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #2b3340;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid #2b3340;
+  background: #0b1120;
+  font-size: 12px;
+}
+
+.panel-card, .settings-panel, .command-palette {
+  background: #111827;
+  border: 1px solid #2b3340;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.file-tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-tree li {
+  margin: 4px 0;
+}
+
+.file-tree button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.file-tree button:hover {
+  background: #1f2937;
+}
+
+.settings-panel {
+  position: fixed;
+  inset: 60px 20% 60px 20%;
+  z-index: 10;
+}
+
+.command-palette {
+  position: fixed;
+  inset: 80px 20% auto 20%;
+  z-index: 10;
+}
+
+.ai-message {
+  padding: 10px;
+  border-radius: 12px;
+  background: #0f172a;
+  margin-bottom: 10px;
+}
+
+.ai-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ai-input-row input, .ai-input-row textarea, .ai-input-row select {
+  width: 100%;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.gutter {
+  height: 8px;
+  background: linear-gradient(90deg, transparent, #1d4ed8, transparent);
+}
